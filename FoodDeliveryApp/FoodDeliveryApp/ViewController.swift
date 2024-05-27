@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     private lazy var justLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = .zero
-        label.textColor = .white
+        label.textColor = AppColors.accentOrange
         label.text = "Aboba"
         label.font = .Roboto.italic.size(of: 40)
         return label
@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = AppColors.grey
         addViews()
         setupConstraints()
         // Do any additional setup after loading the view.
