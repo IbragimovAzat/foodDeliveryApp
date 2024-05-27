@@ -25,6 +25,7 @@
 		10A6497B2C00FCC300AF421C /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A6496D2C00FCC300AF421C /* Roboto-Regular.ttf */; };
 		10A6497C2C00FCC300AF421C /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A6496E2C00FCC300AF421C /* Roboto-Thin.ttf */; };
 		10A6497D2C00FCC300AF421C /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10A6496F2C00FCC300AF421C /* Roboto-ThinItalic.ttf */; };
+		10A649802C049BED00AF421C /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6497F2C049BED00AF421C /* UIFont+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		10A6496D2C00FCC300AF421C /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		10A6496E2C00FCC300AF421C /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		10A6496F2C00FCC300AF421C /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		10A6497F2C049BED00AF421C /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		10A649612C00FC9A00AF421C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				10A6497E2C049BC700AF421C /* Extensions */,
 				10A649622C00FCA200AF421C /* Fonts */,
 			);
 			path = Resources;
@@ -126,6 +129,14 @@
 			);
 			name = Roboto;
 			path = ../../../../../../../../Downloads/Roboto;
+			sourceTree = "<group>";
+		};
+		10A6497E2C049BC700AF421C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				10A6497F2C049BED00AF421C /* UIFont+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +224,7 @@
 			files = (
 				10A649522C00EC8900AF421C /* ViewController.swift in Sources */,
 				10A6494E2C00EC8900AF421C /* AppDelegate.swift in Sources */,
+				10A649802C049BED00AF421C /* UIFont+Extension.swift in Sources */,
 				10A649502C00EC8900AF421C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
