@@ -16,6 +16,7 @@
 		1035AE4F2C0B2B550083EE86 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1035AE4E2C0B2B550083EE86 /* TabBarController.swift */; };
 		1035AE532C0D9EA00083EE86 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1035AE522C0D9EA00083EE86 /* OnboardingViewController.swift */; };
 		1035AE552C0D9ED50083EE86 /* OnboardingViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1035AE542C0D9ED50083EE86 /* OnboardingViewPresenter.swift */; };
+		1035AE732C0DCA720083EE86 /* OnboardingPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1035AE722C0DCA720083EE86 /* OnboardingPartViewController.swift */; };
 		10A6494E2C00EC8900AF421C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6494D2C00EC8900AF421C /* AppDelegate.swift */; };
 		10A649502C00EC8900AF421C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6494F2C00EC8900AF421C /* SceneDelegate.swift */; };
 		10A649522C00EC8900AF421C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A649512C00EC8900AF421C /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 		1035AE4E2C0B2B550083EE86 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1035AE522C0D9EA00083EE86 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		1035AE542C0D9ED50083EE86 /* OnboardingViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewPresenter.swift; sourceTree = "<group>"; };
+		1035AE722C0DCA720083EE86 /* OnboardingPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPartViewController.swift; sourceTree = "<group>"; };
 		10A6494A2C00EC8900AF421C /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A6494D2C00EC8900AF421C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10A6494F2C00EC8900AF421C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				1035AE522C0D9EA00083EE86 /* OnboardingViewController.swift */,
 				1035AE542C0D9ED50083EE86 /* OnboardingViewPresenter.swift */,
+				1035AE722C0DCA720083EE86 /* OnboardingPartViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				1035AE4B2C0B2B0C0083EE86 /* ListCoordinator.swift in Sources */,
 				1035AE472C0B2ACB0083EE86 /* HomeCoordinator.swift in Sources */,
 				1035AE4F2C0B2B550083EE86 /* TabBarController.swift in Sources */,
+				1035AE732C0DCA720083EE86 /* OnboardingPartViewController.swift in Sources */,
 				10A649822C04A55400AF421C /* UIColor+Extension.swift in Sources */,
 				1035AE552C0D9ED50083EE86 /* OnboardingViewPresenter.swift in Sources */,
 				10A6498A2C04B80200AF421C /* Coordinator.swift in Sources */,
