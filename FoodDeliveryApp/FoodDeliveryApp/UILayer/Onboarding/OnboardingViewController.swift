@@ -15,7 +15,7 @@ class OnboardingViewController: UIViewController {
     
     
     // MARK: - Views
-    weak var viewOutput: OnboardingViewOutput!
+    var viewOutput: OnboardingViewOutput!
     private lazy var bottomButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -76,7 +76,7 @@ private extension OnboardingViewController {
             pageViewController.setViewControllers([pages[3]], direction: .forward, animated: true)
             bottomButton.setTitle(pages[3].buttonText, for: .normal)
         case 3:
-            print("Exit")
+            viewOutput.onboardingFinish()
         default:
             break
         }
