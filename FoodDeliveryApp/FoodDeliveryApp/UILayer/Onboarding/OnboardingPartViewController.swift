@@ -24,6 +24,7 @@ class OnboardingPartViewController: UIViewController {
             descriptionLabel.text = descriptionText
         }
     }
+    var buttonText: String?
     
     // MARK: - Views
     private lazy var imageView: UIImageView = {
