@@ -12,7 +12,7 @@ class OnboardingViewController: UIViewController {
 
     // MARK: - Properties
     private var pages = [OnboardingPartViewController]()
-    
+    private var CurrentIndex = 0
     
     // MARK: - Views
     var viewOutput: OnboardingViewOutput!
@@ -129,8 +129,13 @@ extension OnboardingViewController: UIPageViewControllerDataSource {
 extension OnboardingViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
         if let index = pages.firstIndex(of: pendingViewControllers.first! as! OnboardingPartViewController) {
-            pageControl.currentPage = index
-            let title = pages[index].buttonText
+            CurrentIndex = index
+        }
+    }
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if completed {
+            pageControl.currentPage = CurrentIndex
+            let title = pages[CurrentIndex].buttonText
             bottomButton.setTitle(title, for: .normal)
         }
     }
