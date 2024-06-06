@@ -10,13 +10,15 @@ import UIKit
 class AppCoordinator: Coordinator {
     
     private let userStorage = UserStorage.shared
+    private let factory = SceneFactory.self
     
     override func start() {
-        if(userStorage.passedOnboarding) {
-            showMainFlow()
-        } else {
-            showOnboardingFlow()
-        }
+        showOnboardingFlow()
+//        if(userStorage.passedOnboarding) {
+//            showMainFlow()
+//        } else {
+//            showOnboardingFlow()
+//        }
     }
     override func finish() {
         print("AppCoordinator finished")
@@ -27,45 +29,11 @@ class AppCoordinator: Coordinator {
 private extension AppCoordinator {
     func showOnboardingFlow() {
         guard let navigationController = navigationController else { return }
-        let onboardingCoordinator = OnboardingCoordinator(type: .onboarding, navigationController: navigationController, finishDelegate: self)
-        addChildCoordinator(onboardingCoordinator)
-        onboardingCoordinator.start()
+        factory.makeOnboardingFlow(appCoordinator: self, finishDelegate: self, navigationController: navigationController)
     }
     func showMainFlow() {
         guard let navigationController = navigationController else { return }
-        
-        let homeNavigationController = UINavigationController()
-        let homeCoordinator = HomeCoordinator(type: .home, navigationController: homeNavigationController)
-        homeNavigationController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
-        homeCoordinator.finishDelegate = self
-        homeCoordinator.start()
-        
-        let orderNavigationController = UINavigationController()
-        let orderCoordinator = OrderCoordinator(type: .order, navigationController: orderNavigationController)
-        orderNavigationController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 1)
-        orderCoordinator.finishDelegate = self
-        orderCoordinator.start()
-        
-        let listNavigationController = UINavigationController()
-        let listCoordinator = ListCoordinator(type: .list, navigationController: listNavigationController)
-        listNavigationController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 2)
-        listCoordinator.finishDelegate = self
-        listCoordinator.start()
-        
-        let profileNavigationController = UINavigationController()
-        let profileCoordinator = ProfileCoordinator(type: .profile, navigationController: profileNavigationController)
-        profileNavigationController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "person.crop.circle"), tag: 3)
-        profileCoordinator.finishDelegate = self
-        profileCoordinator.start()
-        
-        addChildCoordinator(homeCoordinator)
-        addChildCoordinator(orderCoordinator)
-        addChildCoordinator(listCoordinator)
-        addChildCoordinator(profileCoordinator)
-        
-        let tabBarControllers = [homeNavigationController, orderNavigationController, listNavigationController, profileNavigationController]
-        let tabBarController = TabBarController(tabBarControllers: tabBarControllers)
-        
+        let tabBarController = factory.makeMainFlow(appCoordinator: self, finishDelegate: self)
         navigationController.pushViewController(tabBarController, animated: true)
     }
 }
