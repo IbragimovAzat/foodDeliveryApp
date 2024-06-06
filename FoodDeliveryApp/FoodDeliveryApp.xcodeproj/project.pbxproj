@@ -40,6 +40,7 @@
 		10A649852C04B28B00AF421C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A649842C04B28B00AF421C /* AppColors.swift */; };
 		10A6498A2C04B80200AF421C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A649892C04B80200AF421C /* Coordinator.swift */; };
 		10EE647F2C0F7F3C00A198AA /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE647E2C0F7F3C00A198AA /* UserStorage.swift */; };
+		10EE64822C119E5F00A198AA /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE64812C119E5F00A198AA /* SceneFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		10A649842C04B28B00AF421C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		10A649892C04B80200AF421C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		10EE647E2C0F7F3C00A198AA /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		10EE64812C119E5F00A198AA /* SceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		1035AE502C0D9E4B0083EE86 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
+				10EE64802C119E3F00A198AA /* SceneFactory */,
 				1035AE512C0D9E860083EE86 /* Onboarding */,
 			);
 			path = UILayer;
@@ -229,6 +232,14 @@
 			path = ServicesLayer;
 			sourceTree = "<group>";
 		};
+		10EE64802C119E3F00A198AA /* SceneFactory */ = {
+			isa = PBXGroup;
+			children = (
+				10EE64812C119E5F00A198AA /* SceneFactory.swift */,
+			);
+			path = SceneFactory;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -327,6 +338,7 @@
 				1035AE4F2C0B2B550083EE86 /* TabBarController.swift in Sources */,
 				1035AE732C0DCA720083EE86 /* OnboardingPartViewController.swift in Sources */,
 				10EE647F2C0F7F3C00A198AA /* UserStorage.swift in Sources */,
+				10EE64822C119E5F00A198AA /* SceneFactory.swift in Sources */,
 				10A649822C04A55400AF421C /* UIColor+Extension.swift in Sources */,
 				1035AE552C0D9ED50083EE86 /* OnboardingViewPresenter.swift in Sources */,
 				10A6498A2C04B80200AF421C /* Coordinator.swift in Sources */,
