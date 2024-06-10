@@ -122,6 +122,6 @@ extension BottomView {
     }
 }
 
-#Preview("BottomView", traits: .fixedLayout(width: 400, height: 150)) {
-    BottomView()
-}
+//#Preview("BottomView", traits: .fixedLayout(width: 400, height: 150)) {
+//    BottomView()
+//}

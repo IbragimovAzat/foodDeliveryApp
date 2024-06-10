@@ -16,14 +16,11 @@ class OnboardingViewController: UIViewController {
     
     // MARK: - Views
     var viewOutput: OnboardingViewOutput!
-    private lazy var bottomButton: UIButton = {
-        let button = UIButton()
+    private lazy var bottomButton: FDButton = {
+        let button = FDButton(color: .grey)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = AppColors.grey
-        button.layer.cornerRadius = 20
-        button.titleLabel?.font = .Roboto.bold.size(of: 18)
-        button.setTitleColor(AppColors.black, for: .normal)
-        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        button.setTitle("Aboba", for: .normal)
+        button.buttonAction = buttonPressed
         return button
     }()
     
@@ -52,16 +49,15 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = .purple
-        
         setupPageViewController()
         setupPageControl()
         setupBottomButton()
     }
 }
 // MARK: - Actions
-private extension OnboardingViewController {
-    @objc func buttonPressed() {
+extension OnboardingViewController {
+    func buttonPressed() {
+        print("Button pressed")
         switch pageControl.currentPage {
         case 0:
             pageControl.currentPage = 1
@@ -103,6 +99,8 @@ private extension OnboardingViewController {
     }
     func setupBottomButton() {
         view.addSubview(bottomButton)
+        bottomButton.buttonAction = self.buttonPressed
+        bottomButton.buttonScheme = .onboardingWhite
         bottomButton.setTitle(pages[0].buttonText, for: .normal)
         NSLayoutConstraint.activate([
             bottomButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
@@ -125,7 +123,7 @@ extension OnboardingViewController: UIPageViewControllerDataSource {
         return pages[currentIndex + 1]
     }
 }
-// MARK: - UIPageViewControllerDelegate delegate
+// MARK: - UIPageViewControllerDelegate
 extension OnboardingViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
         if let index = pages.firstIndex(of: pendingViewControllers.first! as! OnboardingPartViewController) {

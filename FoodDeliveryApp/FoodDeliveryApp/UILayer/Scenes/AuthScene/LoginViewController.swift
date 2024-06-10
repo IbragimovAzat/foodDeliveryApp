@@ -44,7 +44,7 @@ private extension LoginViewController {
         print("google")
     }
 }
-
-#Preview("LoginVC") {
-    LoginViewController()
-}
+//
+//#Preview("LoginVC") {
+//    LoginViewController()
+//}
