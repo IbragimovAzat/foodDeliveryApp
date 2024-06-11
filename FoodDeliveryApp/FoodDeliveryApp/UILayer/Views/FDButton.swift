@@ -15,15 +15,6 @@ enum FDButtonColorSchemes {
 }
 
 class FDButton: UIButton {
-    // MARK: - Views
-//    private var button: UIButton = {
-//        let button = UIButton()
-//        button.layer.cornerRadius = 20
-//        button.titleLabel?.font = .Roboto.bold.size(of: 18)
-//        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-//        return button
-//    }()
-    // MARK: - Properties
     var buttonScheme: FDButtonColorSchemes = .onboardingWhite {
         didSet {
             setColorScheme(scheme: buttonScheme)
@@ -32,12 +23,12 @@ class FDButton: UIButton {
     var buttonAction: (() -> Void)?
     
     // MARK: - Initializers
-    init(color: FDButtonColorSchemes) {
+    init(color: FDButtonColorSchemes = .white) {
         super.init(frame: .zero)
         self.layer.cornerRadius = 20
         self.titleLabel?.font = .Roboto.bold.size(of: 18)
         self.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-        self.translatesAutoresizingMaskIntoConstraints = false
+        setColorScheme(scheme: color)
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

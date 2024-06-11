@@ -44,6 +44,8 @@
 		10EE64882C11B34500A198AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE64872C11B34500A198AA /* LoginViewController.swift */; };
 		10EE648D2C11B40E00A198AA /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE648C2C11B40E00A198AA /* BottomView.swift */; };
 		10EE64922C14C78E00A198AA /* FDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE64912C14C78E00A198AA /* FDButton.swift */; };
+		10EE64942C1743EE00A198AA /* FDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE64932C1743EE00A198AA /* FDTextField.swift */; };
+		10EE64962C18625300A198AA /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE64952C18625300A198AA /* LoginPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,8 @@
 		10EE64872C11B34500A198AA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		10EE648C2C11B40E00A198AA /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		10EE64912C14C78E00A198AA /* FDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDButton.swift; sourceTree = "<group>"; };
+		10EE64932C1743EE00A198AA /* FDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDTextField.swift; sourceTree = "<group>"; };
+		10EE64952C18625300A198AA /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				10EE648C2C11B40E00A198AA /* BottomView.swift */,
+				10EE64932C1743EE00A198AA /* FDTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 		10EE648B2C11B3D700A198AA /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				10EE64952C18625300A198AA /* LoginPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -395,6 +401,7 @@
 				1035AE452C0B22C80083EE86 /* OnboardingCoordinator.swift in Sources */,
 				1035AE432C0B220F0083EE86 /* AppCoordinator.swift in Sources */,
 				1035AE492C0B2AF40083EE86 /* OrderCoordinator.swift in Sources */,
+				10EE64942C1743EE00A198AA /* FDTextField.swift in Sources */,
 				1035AE532C0D9EA00083EE86 /* OnboardingViewController.swift in Sources */,
 				10EE64882C11B34500A198AA /* LoginViewController.swift in Sources */,
 				10A649502C00EC8900AF421C /* SceneDelegate.swift in Sources */,
@@ -402,6 +409,7 @@
 				1035AE4B2C0B2B0C0083EE86 /* ListCoordinator.swift in Sources */,
 				1035AE472C0B2ACB0083EE86 /* HomeCoordinator.swift in Sources */,
 				1035AE4F2C0B2B550083EE86 /* TabBarController.swift in Sources */,
+				10EE64962C18625300A198AA /* LoginPresenter.swift in Sources */,
 				1035AE732C0DCA720083EE86 /* OnboardingPartViewController.swift in Sources */,
 				10EE647F2C0F7F3C00A198AA /* UserStorage.swift in Sources */,
 				10EE64822C119E5F00A198AA /* SceneFactory.swift in Sources */,
