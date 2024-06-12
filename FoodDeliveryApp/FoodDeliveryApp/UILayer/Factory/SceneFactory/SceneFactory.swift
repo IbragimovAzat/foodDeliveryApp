@@ -86,4 +86,22 @@ struct SceneFactory {
         let tabBarController = TabBarController(tabBarControllers: tabBarControllers)
         return tabBarController
     }
+    
+    static func makeAuthScene(coordinator: AppCoordinator) -> LoginViewController {
+        let presenter = LoginPresenter(coordinator: coordinator)
+        let vc = LoginViewController(viewOutput: presenter, state: .initial)
+        return vc
+    }
+    
+    static func makeSignInScene(coordinator: AppCoordinator) -> LoginViewController {
+        let presenter = LoginPresenter(coordinator: coordinator)
+        let vc = LoginViewController(viewOutput: presenter, state: .signIn)
+        return vc
+    }
+    
+    static func makeSignUpScene(coordinator: AppCoordinator) -> LoginViewController {
+        let presenter = LoginPresenter(coordinator: coordinator)
+        let vc = LoginViewController(viewOutput: presenter, state: .signUp)
+        return vc
+    }
 }

@@ -257,7 +257,6 @@
 				10EE648B2C11B3D700A198AA /* Presenters */,
 				10EE648A2C11B3B400A198AA /* Controllers */,
 				10EE64892C11B3AE00A198AA /* Views */,
-				10EE64872C11B34500A198AA /* LoginViewController.swift */,
 			);
 			path = AuthScene;
 			sourceTree = "<group>";
@@ -274,6 +273,7 @@
 		10EE648A2C11B3B400A198AA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				10EE64872C11B34500A198AA /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
