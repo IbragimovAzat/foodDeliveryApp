@@ -14,12 +14,8 @@ enum LoginViewState {
 }
 
 protocol LoginViewInput: AnyObject {
-    func onSignInTapped()
-    func onSignUpTapped()
-    func onFacebookTapped()
-    func onGoogleTapped()
-    func onForgotTapped()
-    func onBackPressed()
+    func startLoader()
+    func stopLoader()
 }
 
 class LoginViewController: UIViewController {
@@ -50,6 +46,8 @@ class LoginViewController: UIViewController {
         return button
     }()
     private lazy var verticalStack = UIStackView()
+    private lazy var loader = UIActivityIndicatorView(style: .large)
+    private lazy var loaderContainer = UIView()
     
     // MARK: - Constraints
     private var stackViewBottomCT = NSLayoutConstraint()
@@ -107,6 +105,7 @@ private extension LoginViewController {
                 setupTitleLabel()
                 setupNavigationBar()
         }
+        setupLoaderView()
     }
     func setupNavigationBar() {
         let backImage = UIImage(resource: .back)
@@ -274,10 +273,10 @@ private extension LoginViewController {
     func setupSignInButton() {
         view.addSubview(signInButton)
         signInButton.translatesAutoresizingMaskIntoConstraints = false
+        signInButton.buttonAction = onSignInTapped
         
         switch state {
         case .initial:
-            signInButton.buttonAction = onSignInTapped
             NSLayoutConstraint.activate([
                 signInButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
                 signInButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
@@ -335,9 +334,30 @@ private extension LoginViewController {
     func googleButtonTapped() {
         print("google")
     }
+    func setupLoaderView() {
+        view.addSubview(loaderContainer)
+        loaderContainer.translatesAutoresizingMaskIntoConstraints = false
+        loaderContainer.backgroundColor = AppColors.black.withAlphaComponent(0.2)
+        loaderContainer.isHidden = true
+        loaderContainer.center = view.center
+        
+        NSLayoutConstraint.activate([
+            loaderContainer.widthAnchor.constraint(equalToConstant: view.frame.width),
+            loaderContainer.heightAnchor.constraint(equalToConstant: view.frame.height)
+        ])
+        
+        loaderContainer.addSubview(loader)
+        loader.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            loader.centerXAnchor.constraint(equalTo: loaderContainer.centerXAnchor),
+            loader.centerYAnchor.constraint(equalTo: loaderContainer.centerYAnchor)
+        ])
+    }
 }
-// MARK: - LoginViewInput delegate
-extension LoginViewController: LoginViewInput {
+
+// MARK: - private methods
+private extension LoginViewController {
     func onBackPressed() {
         
     }
@@ -347,7 +367,7 @@ extension LoginViewController: LoginViewInput {
         case .initial:
             viewOutput.goToSignIn()
         case .signIn:
-            return
+            viewOutput.loginStarted(login: signInUsername.text ?? "", password: signInPassword.text ?? "")
         case .signUp:
             return
         }
@@ -374,6 +394,20 @@ extension LoginViewController: LoginViewInput {
     
     func onForgotTapped() {
         
+    }
+    
+}
+
+// MARK: - LoginViewInput delegate
+extension LoginViewController: LoginViewInput {
+    func startLoader() {
+        loaderContainer.isHidden = false
+        loader.startAnimating()
+    }
+    
+    func stopLoader() {
+        loaderContainer.isHidden = true
+        loader.stopAnimating()
     }
     
     
@@ -409,8 +443,6 @@ private extension LoginViewController {
         }
     }
     @objc func keyboardWillHide(_ notification: Notification) {
-//        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
-//        let keyboardHeight = keyboardFrame.cgRectValue.height
         if isKeyboardShown {
             UIView.animate(withDuration: 0.3) {
                 self.stackViewBottomCT.constant = self.bottomCTValue

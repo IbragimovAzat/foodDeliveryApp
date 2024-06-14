@@ -90,18 +90,21 @@ struct SceneFactory {
     static func makeAuthScene(coordinator: AppCoordinator) -> LoginViewController {
         let presenter = LoginPresenter(coordinator: coordinator)
         let vc = LoginViewController(viewOutput: presenter, state: .initial)
+        presenter.viewInput = vc
         return vc
     }
     
     static func makeSignInScene(coordinator: AppCoordinator) -> LoginViewController {
         let presenter = LoginPresenter(coordinator: coordinator)
         let vc = LoginViewController(viewOutput: presenter, state: .signIn)
+        presenter.viewInput = vc
         return vc
     }
     
     static func makeSignUpScene(coordinator: AppCoordinator) -> LoginViewController {
         let presenter = LoginPresenter(coordinator: coordinator)
         let vc = LoginViewController(viewOutput: presenter, state: .signUp)
+        presenter.viewInput = vc
         return vc
     }
 }
