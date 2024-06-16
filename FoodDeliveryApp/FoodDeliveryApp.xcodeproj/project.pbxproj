@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10281C3F2C1F43E50041ED56 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10281C3E2C1F43E50041ED56 /* LoginCoordinator.swift */; };
 		1035AE432C0B220F0083EE86 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1035AE422C0B220F0083EE86 /* AppCoordinator.swift */; };
 		1035AE452C0B22C80083EE86 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1035AE442C0B22C80083EE86 /* OnboardingCoordinator.swift */; };
 		1035AE472C0B2ACB0083EE86 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1035AE462C0B2ACB0083EE86 /* HomeCoordinator.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10281C3E2C1F43E50041ED56 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		1035AE422C0B220F0083EE86 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1035AE442C0B22C80083EE86 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		1035AE462C0B2ACB0083EE86 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				1035AE482C0B2AF40083EE86 /* OrderCoordinator.swift */,
 				1035AE4A2C0B2B0C0083EE86 /* ListCoordinator.swift */,
 				1035AE4C2C0B2B2D0083EE86 /* ProfileCoordinator.swift */,
+				10281C3E2C1F43E50041ED56 /* LoginCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				1035AE4F2C0B2B550083EE86 /* TabBarController.swift in Sources */,
 				10EE64962C18625300A198AA /* LoginPresenter.swift in Sources */,
 				1035AE732C0DCA720083EE86 /* OnboardingPartViewController.swift in Sources */,
+				10281C3F2C1F43E50041ED56 /* LoginCoordinator.swift in Sources */,
 				10EE647F2C0F7F3C00A198AA /* UserStorage.swift in Sources */,
 				10EE64822C119E5F00A198AA /* SceneFactory.swift in Sources */,
 				10A649822C04A55400AF421C /* UIColor+Extension.swift in Sources */,

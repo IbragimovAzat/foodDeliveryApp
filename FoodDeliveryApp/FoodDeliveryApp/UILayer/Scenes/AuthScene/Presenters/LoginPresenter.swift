@@ -20,11 +20,12 @@ protocol LoginViewOutput: AnyObject {
 
 class LoginPresenter {
     // MARK: - Properties
-    private var coordinator: AppCoordinator?
+//    private weak var coordinator: AppCoordinator?
+    private var coordinator: LoginCoordinator?
     weak var viewInput: LoginViewInput?
     
     // MARK: - Initializers
-    init(coordinator: AppCoordinator? = nil , viewInput: LoginViewInput? = nil) {
+    init(coordinator: LoginCoordinator? = nil , viewInput: LoginViewInput? = nil) {
         self.coordinator = coordinator
         self.viewInput = viewInput
     }
@@ -32,7 +33,7 @@ class LoginPresenter {
 
 private extension LoginPresenter {
     func goToMainScreen() {
-        coordinator?.showMainScene()
+        coordinator?.finish()
     }
 }
 

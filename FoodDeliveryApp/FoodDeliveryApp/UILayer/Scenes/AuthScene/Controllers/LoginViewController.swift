@@ -273,7 +273,9 @@ private extension LoginViewController {
     func setupSignInButton() {
         view.addSubview(signInButton)
         signInButton.translatesAutoresizingMaskIntoConstraints = false
-        signInButton.buttonAction = onSignInTapped
+        signInButton.buttonAction = { [weak self] in
+            self?.onSignInTapped()
+        }
         
         switch state {
         case .initial:
@@ -306,7 +308,9 @@ private extension LoginViewController {
         
         switch state {
         case .initial:
-            signUpButton.buttonAction = onSignUpTapped
+            signUpButton.buttonAction = { [weak self] in
+                self?.onSignUpTapped()
+            }
             NSLayoutConstraint.activate([
                 signUpButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
                 signUpButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
@@ -325,8 +329,12 @@ private extension LoginViewController {
         }
     }
     func setupActions() {
-        bottomView.firstButtonTapped = facebookButtonTapped
-        bottomView.secondButtonTapped = googleButtonTapped
+        bottomView.firstButtonTapped = { [weak self] in
+            self?.facebookButtonTapped()
+        }
+        bottomView.secondButtonTapped = { [weak self] in
+            self?.googleButtonTapped()
+        }
     }
     func facebookButtonTapped() {
         print("facebook")
