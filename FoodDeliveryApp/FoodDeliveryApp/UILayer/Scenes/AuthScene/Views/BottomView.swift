@@ -24,6 +24,8 @@ class BottomView: UIView {
     private lazy var view2: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: "bottomvViewImage")
+        view.contentMode = .scaleAspectFit
+        view.clipsToBounds = true
         return view
     }()
     private lazy var firstButton: UIButton = {
@@ -107,7 +109,7 @@ private extension BottomView {
         view2.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             view2.topAnchor.constraint(equalTo: view1.bottomAnchor, constant: 18),
-            view2.leftAnchor.constraint(equalTo: self.leftAnchor, constant: -60),
+            view2.leftAnchor.constraint(equalTo: self.leftAnchor),
             view2.heightAnchor.constraint(equalToConstant: 150),
             view2.widthAnchor.constraint(equalToConstant: 282)
         ])

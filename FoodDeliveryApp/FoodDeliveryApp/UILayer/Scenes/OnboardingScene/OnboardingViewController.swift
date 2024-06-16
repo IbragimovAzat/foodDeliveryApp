@@ -99,7 +99,9 @@ private extension OnboardingViewController {
     }
     func setupBottomButton() {
         view.addSubview(bottomButton)
-        bottomButton.buttonAction = self.buttonPressed
+        bottomButton.buttonAction = { [weak self] in
+            self?.buttonPressed()
+        }
         bottomButton.buttonScheme = .onboardingWhite
         bottomButton.setTitle(pages[0].buttonText, for: .normal)
         NSLayoutConstraint.activate([
