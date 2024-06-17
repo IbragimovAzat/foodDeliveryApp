@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		10281C3F2C1F43E50041ED56 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10281C3E2C1F43E50041ED56 /* LoginCoordinator.swift */; };
+		10281C462C20898C0041ED56 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10281C452C20898C0041ED56 /* HomePresenter.swift */; };
+		10281C482C2089BB0041ED56 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10281C472C2089BB0041ED56 /* HomeViewController.swift */; };
+		10281C4D2C208FED0041ED56 /* FilterHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10281C4C2C208FED0041ED56 /* FilterHorizontalCollectionViewCell.swift */; };
 		1035AE432C0B220F0083EE86 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1035AE422C0B220F0083EE86 /* AppCoordinator.swift */; };
 		1035AE452C0B22C80083EE86 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1035AE442C0B22C80083EE86 /* OnboardingCoordinator.swift */; };
 		1035AE472C0B2ACB0083EE86 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1035AE462C0B2ACB0083EE86 /* HomeCoordinator.swift */; };
@@ -51,6 +54,9 @@
 
 /* Begin PBXFileReference section */
 		10281C3E2C1F43E50041ED56 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		10281C452C20898C0041ED56 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		10281C472C2089BB0041ED56 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		10281C4C2C208FED0041ED56 /* FilterHorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 		1035AE422C0B220F0083EE86 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1035AE442C0B22C80083EE86 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		1035AE462C0B2ACB0083EE86 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
@@ -105,6 +111,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10281C402C20895A0041ED56 /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				10281C432C20897A0041ED56 /* Views */,
+				10281C422C2089730041ED56 /* Controllers */,
+				10281C412C20896B0041ED56 /* Presenters */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		10281C412C20896B0041ED56 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				10281C452C20898C0041ED56 /* HomePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		10281C422C2089730041ED56 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				10281C472C2089BB0041ED56 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		10281C432C20897A0041ED56 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				10281C4B2C208FCE0041ED56 /* CollectionViewCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		10281C4B2C208FCE0041ED56 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				10281C4C2C208FED0041ED56 /* FilterHorizontalCollectionViewCell.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
 		1035AE502C0D9E4B0083EE86 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +356,7 @@
 		10EE64902C14C74800A198AA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				10281C402C20895A0041ED56 /* HomeScene */,
 				10EE64862C11B2DE00A198AA /* AuthScene */,
 				1035AE512C0D9E860083EE86 /* OnboardingScene */,
 			);
@@ -406,10 +455,13 @@
 				1035AE492C0B2AF40083EE86 /* OrderCoordinator.swift in Sources */,
 				10EE64942C1743EE00A198AA /* FDTextField.swift in Sources */,
 				1035AE532C0D9EA00083EE86 /* OnboardingViewController.swift in Sources */,
+				10281C462C20898C0041ED56 /* HomePresenter.swift in Sources */,
+				10281C4D2C208FED0041ED56 /* FilterHorizontalCollectionViewCell.swift in Sources */,
 				10EE64882C11B34500A198AA /* LoginViewController.swift in Sources */,
 				10A649502C00EC8900AF421C /* SceneDelegate.swift in Sources */,
 				1035AE4D2C0B2B2D0083EE86 /* ProfileCoordinator.swift in Sources */,
 				1035AE4B2C0B2B0C0083EE86 /* ListCoordinator.swift in Sources */,
+				10281C482C2089BB0041ED56 /* HomeViewController.swift in Sources */,
 				1035AE472C0B2ACB0083EE86 /* HomeCoordinator.swift in Sources */,
 				1035AE4F2C0B2B550083EE86 /* TabBarController.swift in Sources */,
 				10EE64962C18625300A198AA /* LoginPresenter.swift in Sources */,

@@ -46,16 +46,18 @@ protocol TabBarCoordinator: AnyObject, CoordinatorProtocol {
 }
 
 class Coordinator: CoordinatorProtocol {
+    var window: UIWindow?
     var childCoordinators: [CoordinatorProtocol]
     var type: CoordinatorType
     var navigationController: UINavigationController?
     weak var finishDelegate: CoordinatorFinishDelegate?
     
-    init(childCoordinators: [CoordinatorProtocol] = [CoordinatorProtocol](), type: CoordinatorType, navigationController: UINavigationController, finishDelegate: CoordinatorFinishDelegate? = nil) {
+    init(childCoordinators: [CoordinatorProtocol] = [CoordinatorProtocol](), type: CoordinatorType, navigationController: UINavigationController, finishDelegate: CoordinatorFinishDelegate? = nil, window: UIWindow? = nil) {
         self.childCoordinators = childCoordinators
         self.type = type
         self.navigationController = navigationController
         self.finishDelegate = finishDelegate
+        self.window = window
     }
     deinit {
         print("Coordinator has been deinited \(type)")

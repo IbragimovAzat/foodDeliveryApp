@@ -13,12 +13,12 @@ class AppCoordinator: Coordinator {
     private let factory = SceneFactory.self
     
     override func start() {
-//        if(userStorage.passedOnboarding) {
-//            showAuthFlow()
-//        } else {
-//            showOnboardingFlow()
-//        }
-        showMainFlow()
+        if(userStorage.passedOnboarding) {
+            showAuthFlow()
+        } else {
+            showOnboardingFlow()
+        }
+//        showMainFlow()
     }
     override func finish() {
         print("AppCoordinator finished")
@@ -35,7 +35,12 @@ private extension AppCoordinator {
     func showMainFlow() {
         guard let navigationController = navigationController else { return }
         let tabBarController = factory.makeMainFlow(appCoordinator: self, finishDelegate: self)
-        navigationController.pushViewController(tabBarController, animated: true)
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = .fade
+        self.window?.layer.add(transition, forKey: kCATransition)
+        self.window?.rootViewController = tabBarController
+//        navigationController.pushViewController(tabBarController, animated: true)
     }
     func showAuthFlow() {
         guard let navigationController = navigationController else { return }
@@ -50,7 +55,6 @@ extension AppCoordinator: CoordinatorFinishDelegate {
         
         switch childCoordinator.type {
         case .onboarding:
-//            navigationController?.viewControllers.removeAll()
             showAuthFlow()
             navigationController?.viewControllers = [
                 navigationController?.viewControllers.last ?? UIViewController()
@@ -58,7 +62,6 @@ extension AppCoordinator: CoordinatorFinishDelegate {
         case .app:
             return
         case .login:
-//            navigationController?.viewControllers.removeAll()
             showMainFlow() 
             navigationController?.viewControllers = [
                 navigationController?.viewControllers.last ?? UIViewController()
