@@ -26,10 +26,8 @@ class HomeViewController: UIViewController {
     private lazy var foodMenuCollection: UICollectionView = {
         var layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-//        layout.headerReferenceSize = .zero
         layout.minimumLineSpacing = 20
         layout.minimumInteritemSpacing = 20
-//        layout.itemSize = CGSize(width: 130, height: 130)
         layout.sectionInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 0)
         var collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.tag = 2
@@ -38,14 +36,26 @@ class HomeViewController: UIViewController {
     private lazy var itemVCollection: UICollectionView = {
         var layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-//        layout.headerReferenceSize = .zero
         layout.minimumLineSpacing = 20
         layout.minimumInteritemSpacing = 20
-//        layout.itemSize = CGSize(width: 130, height: 130)
         layout.sectionInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 0)
         var collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.tag = 3
         return collection
+    }()
+    private lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.showsVerticalScrollIndicator = true
+        scrollView.alwaysBounceVertical = true
+        scrollView.backgroundColor = .brown
+        return scrollView
+    }()
+    private lazy var contentView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .systemMint
+        return view
     }()
     
     // MARK: - Initializers
@@ -66,6 +76,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     func setupLayout() {
         setupView()
+        prepareScrollView()
         setupfiltersHorizontalCollection()
         setupFoodMenuCollection()
         setupitemVCollection()
@@ -73,8 +84,25 @@ extension HomeViewController {
     func setupView() {
         view.backgroundColor = .white
     }
+    func prepareScrollView() {
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            
+            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+        ])
+    }
     func setupfiltersHorizontalCollection() {
-        view.addSubview(filtersHorizontalCollection)
+        contentView.addSubview(filtersHorizontalCollection)
         filtersHorizontalCollection.translatesAutoresizingMaskIntoConstraints = false
         filtersHorizontalCollection.backgroundColor = .red
         filtersHorizontalCollection.delegate = self
@@ -82,14 +110,14 @@ extension HomeViewController {
         filtersHorizontalCollection.register(FilterHorizontalCollectionViewCell.self, forCellWithReuseIdentifier: "FilterHorizontalCollectionViewCell")
         
         NSLayoutConstraint.activate([
-            filtersHorizontalCollection.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
-            filtersHorizontalCollection.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
-            filtersHorizontalCollection.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            filtersHorizontalCollection.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 100),
+            filtersHorizontalCollection.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
+            filtersHorizontalCollection.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             filtersHorizontalCollection.heightAnchor.constraint(equalToConstant: 91)
         ])
     }
     func setupFoodMenuCollection() {
-        view.addSubview(foodMenuCollection)
+        contentView.addSubview(foodMenuCollection)
         foodMenuCollection.translatesAutoresizingMaskIntoConstraints = false
         foodMenuCollection.backgroundColor = .red
         foodMenuCollection.delegate = self
@@ -98,13 +126,13 @@ extension HomeViewController {
         
         NSLayoutConstraint.activate([
             foodMenuCollection.topAnchor.constraint(equalTo: filtersHorizontalCollection.bottomAnchor, constant: 100),
-            foodMenuCollection.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
-            foodMenuCollection.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            foodMenuCollection.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
+            foodMenuCollection.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             foodMenuCollection.heightAnchor.constraint(equalToConstant: 130*2+20),
         ])
     }
     func setupitemVCollection() {
-        view.addSubview(itemVCollection)
+        contentView.addSubview(itemVCollection)
         itemVCollection.translatesAutoresizingMaskIntoConstraints = false
         itemVCollection.backgroundColor = .red
         itemVCollection.delegate = self
@@ -113,9 +141,10 @@ extension HomeViewController {
         
         NSLayoutConstraint.activate([
             itemVCollection.topAnchor.constraint(equalTo: foodMenuCollection.bottomAnchor, constant: 50),
-            itemVCollection.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-            itemVCollection.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-            itemVCollection.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            itemVCollection.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30),
+            itemVCollection.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30),
+            itemVCollection.heightAnchor.constraint(equalToConstant: 1000),
+            itemVCollection.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
 }
