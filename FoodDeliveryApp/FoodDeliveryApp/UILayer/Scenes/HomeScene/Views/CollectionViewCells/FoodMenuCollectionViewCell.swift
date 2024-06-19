@@ -1,13 +1,13 @@
 //
-//  FilterHorizontalCollectionViewCell.swift
+//  FoodMenuCollectionViewCell.swift
 //  FoodDeliveryApp
 //
-//  Created by Азат Ибрагимов on 17.06.2024.
+//  Created by Азат Ибрагимов on 19.06.2024.
 //
 
 import UIKit
 
-class FilterHorizontalCollectionViewCell: UICollectionViewCell {
+class FoodMenuCollectionViewCell: UICollectionViewCell {
     // MARK: - Views
     let topView = UIView()
     let label = UILabel()
@@ -24,7 +24,7 @@ class FilterHorizontalCollectionViewCell: UICollectionViewCell {
     func setupCell() {
         contentView.backgroundColor = .blue
         setupTopView()
-        setupBottomLabel()
+        setupLabel()
     }
     func setupTopView() {
         contentView.addSubview(topView)
@@ -37,21 +37,21 @@ class FilterHorizontalCollectionViewCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             topView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             topView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            topView.widthAnchor.constraint(equalToConstant: 70),
-            topView.heightAnchor.constraint(equalToConstant: 70)
+            topView.widthAnchor.constraint(equalToConstant: 130),
+            topView.heightAnchor.constraint(equalToConstant: 130)
         ])
     }
-    func setupBottomLabel() {
+    func setupLabel() {
         contentView.addSubview(label)
         
         label.font = UIFont.Roboto.regular.size(of: 14)
         label.text = "Aboba"
-        label.textColor = .white
+        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: topView.bottomAnchor, constant: 5),
-            label.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
+            label.topAnchor.constraint(equalTo: topView.topAnchor, constant: 10),
+            label.leftAnchor.constraint(equalTo: topView.leftAnchor, constant: 15)
         ])
     }
 }

@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		100746042C2339BB00EB9D0D /* ItemVCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100746032C2339BB00EB9D0D /* ItemVCollectionViewCell.swift */; };
 		10281C3F2C1F43E50041ED56 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10281C3E2C1F43E50041ED56 /* LoginCoordinator.swift */; };
 		10281C462C20898C0041ED56 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10281C452C20898C0041ED56 /* HomePresenter.swift */; };
 		10281C482C2089BB0041ED56 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10281C472C2089BB0041ED56 /* HomeViewController.swift */; };
 		10281C4D2C208FED0041ED56 /* FilterHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10281C4C2C208FED0041ED56 /* FilterHorizontalCollectionViewCell.swift */; };
+		10281C4F2C232B470041ED56 /* FoodMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10281C4E2C232B470041ED56 /* FoodMenuCollectionViewCell.swift */; };
 		1035AE432C0B220F0083EE86 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1035AE422C0B220F0083EE86 /* AppCoordinator.swift */; };
 		1035AE452C0B22C80083EE86 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1035AE442C0B22C80083EE86 /* OnboardingCoordinator.swift */; };
 		1035AE472C0B2ACB0083EE86 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1035AE462C0B2ACB0083EE86 /* HomeCoordinator.swift */; };
@@ -53,10 +55,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		100746032C2339BB00EB9D0D /* ItemVCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVCollectionViewCell.swift; sourceTree = "<group>"; };
 		10281C3E2C1F43E50041ED56 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		10281C452C20898C0041ED56 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		10281C472C2089BB0041ED56 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		10281C4C2C208FED0041ED56 /* FilterHorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
+		10281C4E2C232B470041ED56 /* FoodMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodMenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		1035AE422C0B220F0083EE86 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1035AE442C0B22C80083EE86 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		1035AE462C0B2ACB0083EE86 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				10281C4C2C208FED0041ED56 /* FilterHorizontalCollectionViewCell.swift */,
+				10281C4E2C232B470041ED56 /* FoodMenuCollectionViewCell.swift */,
+				100746032C2339BB00EB9D0D /* ItemVCollectionViewCell.swift */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -450,10 +456,12 @@
 				10A6494E2C00EC8900AF421C /* AppDelegate.swift in Sources */,
 				10A649802C049BED00AF421C /* UIFont+Extension.swift in Sources */,
 				10A649852C04B28B00AF421C /* AppColors.swift in Sources */,
+				100746042C2339BB00EB9D0D /* ItemVCollectionViewCell.swift in Sources */,
 				1035AE452C0B22C80083EE86 /* OnboardingCoordinator.swift in Sources */,
 				1035AE432C0B220F0083EE86 /* AppCoordinator.swift in Sources */,
 				1035AE492C0B2AF40083EE86 /* OrderCoordinator.swift in Sources */,
 				10EE64942C1743EE00A198AA /* FDTextField.swift in Sources */,
+				10281C4F2C232B470041ED56 /* FoodMenuCollectionViewCell.swift in Sources */,
 				1035AE532C0D9EA00083EE86 /* OnboardingViewController.swift in Sources */,
 				10281C462C20898C0041ED56 /* HomePresenter.swift in Sources */,
 				10281C4D2C208FED0041ED56 /* FilterHorizontalCollectionViewCell.swift in Sources */,
