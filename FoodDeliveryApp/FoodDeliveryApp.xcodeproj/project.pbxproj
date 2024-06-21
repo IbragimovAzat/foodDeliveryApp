@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		100746042C2339BB00EB9D0D /* ItemVCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100746032C2339BB00EB9D0D /* ItemVCollectionViewCell.swift */; };
+		100746062C25CF5400EB9D0D /* FDSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100746052C25CF5400EB9D0D /* FDSearchField.swift */; };
+		100746082C25E73C00EB9D0D /* FDFoodMenuTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100746072C25E73C00EB9D0D /* FDFoodMenuTitle.swift */; };
 		10281C3F2C1F43E50041ED56 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10281C3E2C1F43E50041ED56 /* LoginCoordinator.swift */; };
 		10281C462C20898C0041ED56 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10281C452C20898C0041ED56 /* HomePresenter.swift */; };
 		10281C482C2089BB0041ED56 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10281C472C2089BB0041ED56 /* HomeViewController.swift */; };
@@ -56,6 +58,8 @@
 
 /* Begin PBXFileReference section */
 		100746032C2339BB00EB9D0D /* ItemVCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVCollectionViewCell.swift; sourceTree = "<group>"; };
+		100746052C25CF5400EB9D0D /* FDSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDSearchField.swift; sourceTree = "<group>"; };
+		100746072C25E73C00EB9D0D /* FDFoodMenuTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDFoodMenuTitle.swift; sourceTree = "<group>"; };
 		10281C3E2C1F43E50041ED56 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		10281C452C20898C0041ED56 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		10281C472C2089BB0041ED56 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				10281C4B2C208FCE0041ED56 /* CollectionViewCells */,
+				100746052C25CF5400EB9D0D /* FDSearchField.swift */,
+				100746072C25E73C00EB9D0D /* FDFoodMenuTitle.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -477,10 +483,12 @@
 				10281C3F2C1F43E50041ED56 /* LoginCoordinator.swift in Sources */,
 				10EE647F2C0F7F3C00A198AA /* UserStorage.swift in Sources */,
 				10EE64822C119E5F00A198AA /* SceneFactory.swift in Sources */,
+				100746082C25E73C00EB9D0D /* FDFoodMenuTitle.swift in Sources */,
 				10A649822C04A55400AF421C /* UIColor+Extension.swift in Sources */,
 				10EE648D2C11B40E00A198AA /* BottomView.swift in Sources */,
 				10EE64922C14C78E00A198AA /* FDButton.swift in Sources */,
 				1035AE552C0D9ED50083EE86 /* OnboardingViewPresenter.swift in Sources */,
+				100746062C25CF5400EB9D0D /* FDSearchField.swift in Sources */,
 				10A6498A2C04B80200AF421C /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
