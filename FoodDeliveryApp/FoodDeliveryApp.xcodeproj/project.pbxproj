@@ -10,6 +10,10 @@
 		100746042C2339BB00EB9D0D /* ItemVCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100746032C2339BB00EB9D0D /* ItemVCollectionViewCell.swift */; };
 		100746062C25CF5400EB9D0D /* FDSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100746052C25CF5400EB9D0D /* FDSearchField.swift */; };
 		100746082C25E73C00EB9D0D /* FDFoodMenuTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100746072C25E73C00EB9D0D /* FDFoodMenuTitle.swift */; };
+		1007460E2C27228B00EB9D0D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1007460D2C27228B00EB9D0D /* ProfileViewController.swift */; };
+		100746102C27229E00EB9D0D /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1007460F2C27229D00EB9D0D /* ProfilePresenter.swift */; };
+		100746122C27273600EB9D0D /* ProfileListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100746112C27273600EB9D0D /* ProfileListButton.swift */; };
+		100746142C27415300EB9D0D /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100746132C27415300EB9D0D /* ChangePasswordViewController.swift */; };
 		10281C3F2C1F43E50041ED56 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10281C3E2C1F43E50041ED56 /* LoginCoordinator.swift */; };
 		10281C462C20898C0041ED56 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10281C452C20898C0041ED56 /* HomePresenter.swift */; };
 		10281C482C2089BB0041ED56 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10281C472C2089BB0041ED56 /* HomeViewController.swift */; };
@@ -47,6 +51,7 @@
 		10A649822C04A55400AF421C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A649812C04A55400AF421C /* UIColor+Extension.swift */; };
 		10A649852C04B28B00AF421C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A649842C04B28B00AF421C /* AppColors.swift */; };
 		10A6498A2C04B80200AF421C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A649892C04B80200AF421C /* Coordinator.swift */; };
+		10C1DE2D2C28741D0098E7A7 /* MainScreenNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C1DE2C2C28741D0098E7A7 /* MainScreenNetworkService.swift */; };
 		10EE647F2C0F7F3C00A198AA /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE647E2C0F7F3C00A198AA /* UserStorage.swift */; };
 		10EE64822C119E5F00A198AA /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE64812C119E5F00A198AA /* SceneFactory.swift */; };
 		10EE64882C11B34500A198AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE64872C11B34500A198AA /* LoginViewController.swift */; };
@@ -60,6 +65,10 @@
 		100746032C2339BB00EB9D0D /* ItemVCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVCollectionViewCell.swift; sourceTree = "<group>"; };
 		100746052C25CF5400EB9D0D /* FDSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDSearchField.swift; sourceTree = "<group>"; };
 		100746072C25E73C00EB9D0D /* FDFoodMenuTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDFoodMenuTitle.swift; sourceTree = "<group>"; };
+		1007460D2C27228B00EB9D0D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1007460F2C27229D00EB9D0D /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		100746112C27273600EB9D0D /* ProfileListButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListButton.swift; sourceTree = "<group>"; };
+		100746132C27415300EB9D0D /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		10281C3E2C1F43E50041ED56 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		10281C452C20898C0041ED56 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		10281C472C2089BB0041ED56 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +108,7 @@
 		10A649812C04A55400AF421C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		10A649842C04B28B00AF421C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		10A649892C04B80200AF421C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		10C1DE2C2C28741D0098E7A7 /* MainScreenNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenNetworkService.swift; sourceTree = "<group>"; };
 		10EE647E2C0F7F3C00A198AA /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		10EE64812C119E5F00A198AA /* SceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
 		10EE64872C11B34500A198AA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +129,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		100746092C27226000EB9D0D /* ProfileScene */ = {
+			isa = PBXGroup;
+			children = (
+				1007460C2C27227400EB9D0D /* Views */,
+				1007460B2C27226F00EB9D0D /* Controllers */,
+				1007460A2C27226900EB9D0D /* Presenters */,
+			);
+			path = ProfileScene;
+			sourceTree = "<group>";
+		};
+		1007460A2C27226900EB9D0D /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				1007460F2C27229D00EB9D0D /* ProfilePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		1007460B2C27226F00EB9D0D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1007460D2C27228B00EB9D0D /* ProfileViewController.swift */,
+				100746132C27415300EB9D0D /* ChangePasswordViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1007460C2C27227400EB9D0D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				100746112C27273600EB9D0D /* ProfileListButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		10281C402C20895A0041ED56 /* HomeScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,9 +343,18 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		10C1DE2B2C2873FD0098E7A7 /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				10C1DE2C2C28741D0098E7A7 /* MainScreenNetworkService.swift */,
+			);
+			path = NetworkServices;
+			sourceTree = "<group>";
+		};
 		10EE647D2C0F7F2100A198AA /* ServicesLayer */ = {
 			isa = PBXGroup;
 			children = (
+				10C1DE2B2C2873FD0098E7A7 /* NetworkServices */,
 				10EE647E2C0F7F3C00A198AA /* UserStorage.swift */,
 			);
 			path = ServicesLayer;
@@ -368,6 +422,7 @@
 		10EE64902C14C74800A198AA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				100746092C27226000EB9D0D /* ProfileScene */,
 				10281C402C20895A0041ED56 /* HomeScene */,
 				10EE64862C11B2DE00A198AA /* AuthScene */,
 				1035AE512C0D9E860083EE86 /* OnboardingScene */,
@@ -460,13 +515,17 @@
 			files = (
 				10A649522C00EC8900AF421C /* ViewController.swift in Sources */,
 				10A6494E2C00EC8900AF421C /* AppDelegate.swift in Sources */,
+				100746122C27273600EB9D0D /* ProfileListButton.swift in Sources */,
+				10C1DE2D2C28741D0098E7A7 /* MainScreenNetworkService.swift in Sources */,
 				10A649802C049BED00AF421C /* UIFont+Extension.swift in Sources */,
 				10A649852C04B28B00AF421C /* AppColors.swift in Sources */,
 				100746042C2339BB00EB9D0D /* ItemVCollectionViewCell.swift in Sources */,
 				1035AE452C0B22C80083EE86 /* OnboardingCoordinator.swift in Sources */,
+				1007460E2C27228B00EB9D0D /* ProfileViewController.swift in Sources */,
 				1035AE432C0B220F0083EE86 /* AppCoordinator.swift in Sources */,
 				1035AE492C0B2AF40083EE86 /* OrderCoordinator.swift in Sources */,
 				10EE64942C1743EE00A198AA /* FDTextField.swift in Sources */,
+				100746102C27229E00EB9D0D /* ProfilePresenter.swift in Sources */,
 				10281C4F2C232B470041ED56 /* FoodMenuCollectionViewCell.swift in Sources */,
 				1035AE532C0D9EA00083EE86 /* OnboardingViewController.swift in Sources */,
 				10281C462C20898C0041ED56 /* HomePresenter.swift in Sources */,
@@ -476,6 +535,7 @@
 				1035AE4D2C0B2B2D0083EE86 /* ProfileCoordinator.swift in Sources */,
 				1035AE4B2C0B2B0C0083EE86 /* ListCoordinator.swift in Sources */,
 				10281C482C2089BB0041ED56 /* HomeViewController.swift in Sources */,
+				100746142C27415300EB9D0D /* ChangePasswordViewController.swift in Sources */,
 				1035AE472C0B2ACB0083EE86 /* HomeCoordinator.swift in Sources */,
 				1035AE4F2C0B2B550083EE86 /* TabBarController.swift in Sources */,
 				10EE64962C18625300A198AA /* LoginPresenter.swift in Sources */,

@@ -55,3 +55,7 @@ class NearMeCollectionViewCell: UICollectionViewCell {
         ])
     }
 }
+
+//#Preview("NearMeCollectionVC") {
+//    NearMeCollectionViewCell()
+//}

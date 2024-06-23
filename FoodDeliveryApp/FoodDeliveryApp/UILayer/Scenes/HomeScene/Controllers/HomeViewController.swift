@@ -7,10 +7,15 @@
 
 import UIKit
 
+struct Person {
+    var name: String
+    var gender: String
+}
+
 class HomeViewController: UIViewController {
 
     // MARK: - Properties
-    
+    let persons: [Person]? = nil
     // MARK: - Views
     private lazy var searchField: FDSearchField = FDSearchField()
     private lazy var filtersHorizontalCollection: UICollectionView = {
@@ -83,10 +88,13 @@ class HomeViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        
     }
 }
 // MARK: - Layout
@@ -229,7 +237,6 @@ extension HomeViewController {
             itemVCollection.topAnchor.constraint(equalTo: nearMeTitle.bottomAnchor, constant: 26),
             itemVCollection.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30),
             itemVCollection.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30),
-//            itemVCollection.heightAnchor.constraint(equalToConstant: 1000),
             itemVCollection.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }

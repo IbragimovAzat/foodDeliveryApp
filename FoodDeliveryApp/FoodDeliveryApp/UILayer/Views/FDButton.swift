@@ -20,12 +20,7 @@ class FDButton: UIButton {
             setColorScheme(scheme: buttonScheme)
         }
     }
-    var buttonAction: (() -> Void)? 
-//    {
-//        didSet {
-//            self.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-//        }
-//    }
+    var buttonAction: (() -> Void)?
     
     // MARK: - Initializers
     init(color: FDButtonColorSchemes = .white) {

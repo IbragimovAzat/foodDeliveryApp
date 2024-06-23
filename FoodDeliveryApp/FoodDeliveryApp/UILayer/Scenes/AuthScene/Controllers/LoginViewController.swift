@@ -143,7 +143,6 @@ private extension LoginViewController {
             NSLayoutConstraint.activate([
                 verticalStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                 stackViewBottomCT
-//                verticalStack.bottomAnchor.constraint(equalTo: bottomView.topAnchor, constant: -262)
             ])
         case .signUp:
             verticalStack.addArrangedSubview(signUpUsername)
@@ -176,26 +175,22 @@ private extension LoginViewController {
         ])
     }
     func setupSignInUsername() {
-//        view.addSubview(signInUsername)
         signInUsername.placeholder = "Username"
         signInUsername.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-//            signInUsername.bottomAnchor.constraint(equalTo: signInPassword.topAnchor, constant: -20),
             signInUsername.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
             signInUsername.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
             signInUsername.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     func setupSignInPassword() {
-//        view.addSubview(signInPassword)
         signInPassword.placeholder = "Password"
         signInPassword.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             signInPassword.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
             signInPassword.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
-//            signInPassword.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
             signInPassword.heightAnchor.constraint(equalToConstant: 50),
         ])
     }
@@ -222,38 +217,32 @@ private extension LoginViewController {
         }
     }
     func setupSignUpUsername() {
-//        view.addSubview(signUpUsername)
         signUpUsername.translatesAutoresizingMaskIntoConstraints = false
         signUpUsername.placeholder = "Enter Username"
         
         NSLayoutConstraint.activate([
             signUpUsername.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
             signUpUsername.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
-//            signUpUsername.bottomAnchor.constraint(equalTo: signUpPassword.topAnchor, constant: -20),
             signUpUsername.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     func setupSignUpPasssword() {
-//        view.addSubview(signUpPassword)
         signUpPassword.translatesAutoresizingMaskIntoConstraints = false
         signUpPassword.placeholder = "Enter Password"
         
         NSLayoutConstraint.activate([
             signUpPassword.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
             signUpPassword.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
-//            signUpPassword.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             signUpPassword.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     func setupSignUpReEnterPass() {
-//        view.addSubview(signUpReEnterPass)
         signUpReEnterPass.translatesAutoresizingMaskIntoConstraints = false
         signUpReEnterPass.placeholder = "Re-Enter Password"
         
         NSLayoutConstraint.activate([
             signUpReEnterPass.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
             signUpReEnterPass.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
-//            signUpReEnterPass.topAnchor.constraint(equalTo: signUpPassword.bottomAnchor, constant: 20),
             signUpReEnterPass.heightAnchor.constraint(equalToConstant: 50)
         ])
     }

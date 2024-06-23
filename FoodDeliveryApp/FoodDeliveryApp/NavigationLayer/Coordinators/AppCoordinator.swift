@@ -33,14 +33,12 @@ private extension AppCoordinator {
         onboardingCoordinator.start()
     }
     func showMainFlow() {
-        guard let navigationController = navigationController else { return }
         let tabBarController = factory.makeMainFlow(appCoordinator: self, finishDelegate: self)
         let transition = CATransition()
         transition.duration = 0.3
         transition.type = .fade
         self.window?.layer.add(transition, forKey: kCATransition)
         self.window?.rootViewController = tabBarController
-//        navigationController.pushViewController(tabBarController, animated: true)
     }
     func showAuthFlow() {
         guard let navigationController = navigationController else { return }
